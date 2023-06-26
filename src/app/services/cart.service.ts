@@ -48,7 +48,6 @@ export class CartService {
    let sum: number  = 0;
    this.cartItems.forEach(prod => {
      let prodPrice = Number(prod.price)
-     console.log(prod.price)
      sum += prodPrice
    });
    return sum;
