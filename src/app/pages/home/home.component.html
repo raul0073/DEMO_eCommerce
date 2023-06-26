@@ -1,0 +1,9 @@
+
+<section class="products">
+  <div class="container">
+    <div class="box" *ngFor="let product of products">
+        <app-product-box [prod]="product" [imageSrc]="product.thumbnail"></app-product-box>
+      </div>
+</div>
+</section>
+

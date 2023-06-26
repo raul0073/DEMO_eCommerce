@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CartService } from './services/cart.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  cartItemsSum: number = 0;
+
+  constructor(public cartService: CartService){}
+
+  ngOnInit() {
+    this.cartItemsSum = this.cartService.cartItems.length;
+  }
+
+  openCart(){
+    this.cartService.isCartOpen = true;
+  }
+
 }

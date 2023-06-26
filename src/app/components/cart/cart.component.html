@@ -1,0 +1,24 @@
+<div class="cart" [style.display]="isCartOpen ? 'flex' : 'none'">
+  <div class="cart-header">
+    <h2>Cart Items</h2>
+  </div>
+  <ol>
+    <div class="itemRow" *ngFor="let item of cartItems">
+      <img [src]="item.thumbnail" [alt]="item.title">
+      <div class="details">
+        <span class="seller">{{item.brand}}</span>
+        <span class="prodName">{{ item.title }}</span>
+      </div>
+      <button (click)="removeItem(item.id)"></button>
+      <span class="prodPrice">{{ item.price }}</span>
+    </div>
+  </ol>
+  <div class="cart-footer">
+    <h3>Total items: <span>{{cartItems.length}}</span> </h3>
+    <p>Additional Fees: <span>$ 19.90</span></p>
+    <p>Total Price: <span>$ {{ cartSum }}</span></p>
+    <button>Go To Checkout</button>
+    <button class="closeCart" (click)="closeCart()">Close Cart</button>
+  </div>
+
+</div>

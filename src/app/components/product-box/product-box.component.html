@@ -1,0 +1,32 @@
+
+<!-- check if cart is open-->
+<app-cart *ngIf="cartService.isCartOpen"></app-cart>
+<!-- product box with item id -->
+
+    <div class="box" >
+        <div class="box-clickable-wrapper" [id]="prod.id" #proID (click)="openPopUp(proID.id)" [routerLink]="['/productDetails', prod.id]" >
+        <!-- product image -->
+        <div class="img-container">
+            <img [src]="imageSrc" (mouseenter)="imageSrc = prod.img2" (mouseleave)="imageSrc = prod.thumbnail" alt="productPic" />
+        </div>
+        <!-- product data -->
+        <div class="box-content">
+            <h2 >{{ prod.title }}</h2>
+            <h3 class="brand">{{prod.category}}</h3><br/>
+            
+            <p>{{ prod.description }}</p><br/>
+            <h3 class="brand"><span>Rating: </span>{{ prod.rating }}</h3>
+            <span class="discount">{{prod.discountPercentage}}%</span>
+            <h3 class="price">{{ convertPrice(prod.price) }}</h3>
+        </div>
+    </div>    
+        <!-- prodcut box btns -->
+        <div class="btn-container">
+            <button class="btnAdd" (click)="addToCart(proID.id)">Add to Cart</button>
+            <!-- <button class="btnAdd" >Go to product</button> --> 
+        </div>
+    </div>
+   
+
+
+

@@ -1,0 +1,63 @@
+$webOrange: rgb(255, 191, 71);
+
+.container{
+    display: flex;
+    width: 80%;
+    margin: 1rem auto;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+    padding:1rem;
+
+
+    .leftImage{
+        padding: 1rem;
+        height: 100%;
+        width: 50%;
+        background-color: #d0d0d0;
+
+        img{
+            mix-blend-mode: multiply;
+            width: 100%;
+        }
+    }
+
+    .rightContent{
+        display: block;
+        text-align: left;
+        padding: 2rem;
+        width: 50%;
+        i{
+            text-transform: uppercase;
+            font-size: .9rem;
+            text-decoration: underline;
+        }
+        h2{
+            font-size: 4rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        p.price{
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+        button.addToCart{
+            width: 40%;
+            padding: .5rem;
+            border-radius: 2rem;
+            background-color: $webOrange;
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: .3s ease;
+            margin: 1rem 0;
+
+            &:hover{
+                border: 1px solid black;
+            }
+        }
+    }
+
+}
