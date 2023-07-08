@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {ProductForBox} from "../../classes/product-for-box";
 import { CartService } from '../../services/cart.service';
 
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -22,6 +23,7 @@ export class CartComponent {
    this.cartItems = this.cartService.cartItems;
    this.isCartOpen = this.cartService.isCartOpen;
    this.getCartSum();
+   console.log(this.cartItems)
  }
 
  closeCart() {

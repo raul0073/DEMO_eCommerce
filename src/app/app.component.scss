@@ -55,8 +55,11 @@ $webOrange: rgb(255, 191, 71);
                     }
 
                     span{
-                        font-size: .8rem;
-                        padding: .3rem;
+                        font-size: 1.2rem;
+                        background-color: red;
+                        border-radius: 60% 50%;
+                        padding: .5rem;
+                        font-weight: 800;
                         position: absolute;
                         color: white;
                         margin: -.5rem;

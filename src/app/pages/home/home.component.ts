@@ -1,3 +1,4 @@
+
 import { ProductService } from './../../services/product.service';
 import { Component, Input } from '@angular/core';
 import { ProductForBox } from 'src/app/classes/product-for-box';
@@ -12,7 +13,9 @@ export class HomeComponent {
   // set constructor
   constructor(private  productsS: ProductService) {}
   // set products list
-  products: ProductForBox[]=[];
+  products: ProductForBox[] = [];
+
+
   @Input() imageSrc: string = "";
   
 
@@ -31,10 +34,11 @@ export class HomeComponent {
           product.discountPercentage,
           product.images[2],
           product.category,
-        );
-        
+          product.quantity = 0
+        );   
       });
     });
+
   }
 
   ngOnInit(): void{

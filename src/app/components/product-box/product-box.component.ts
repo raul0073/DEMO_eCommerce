@@ -11,7 +11,12 @@ import { Router } from '@angular/router';
 })
 export class ProductBoxComponent {
 
-  constructor(private ProductService: ProductService, public cartService: CartService, @Inject(LOCALE_ID) public locale: string, private router: Router ) {}
+  constructor(
+    private ProductService: ProductService,
+    public cartService: CartService,
+    @Inject(LOCALE_ID) public locale: string,
+    private router: Router 
+    ) {}
 
   // pass prod on
   @Input() prod: any;
@@ -21,7 +26,7 @@ export class ProductBoxComponent {
   @Input() imageSrc: string = "";
 
  // get data on click
- openPopUp(id: string){
+ goToProductPage(id: string){
   this.ProductService.getOneProductForBox(id).subscribe(data => {
   this.product = data;
   this.router.navigate(['/productDetails', id])
@@ -43,5 +48,9 @@ convertPrice(price: string){
   let Numprice = Number(price);
   let curr = formatCurrency(Numprice,this.locale,'$ ');
   return curr
+}
+
+openCategoriesPages(){
+  console.log("opennnnnn")
 }
 }

@@ -11,7 +11,9 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class ProductDetailedComponent {
 
-  constructor(private route: ActivatedRoute, public productS: ProductService, public cartS: CartService) { }
+  constructor(private route: ActivatedRoute,
+     public productS: ProductService,
+     public cartS: CartService) { }
 
   productDetails: any;
   product: any;

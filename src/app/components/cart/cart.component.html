@@ -1,10 +1,12 @@
 <div class="cart" [style.display]="isCartOpen ? 'flex' : 'none'">
   <div class="cart-header">
-    <h2>Cart Items</h2>
+    <h2>Cart Itemasdasdsadsads</h2>
   </div>
   <ol>
     <div class="itemRow" *ngFor="let item of cartItems">
-      <img [src]="item.thumbnail" [alt]="item.title">
+
+      <!-- <img [src]="item.thumbnail" [alt]="item.title"> -->
+      {{item.qty}}
       <div class="details">
         <span class="seller">{{item.brand}}</span>
         <span class="prodName">{{ item.title }}</span>
@@ -20,5 +22,4 @@
     <button>Go To Checkout</button>
     <button class="closeCart" (click)="closeCart()">Close Cart</button>
   </div>
-
 </div>

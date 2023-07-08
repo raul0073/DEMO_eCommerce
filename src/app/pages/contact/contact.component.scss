@@ -1,0 +1,22 @@
+.container{
+    width: 80%;
+    background-color: rgb(229, 229, 229);
+    height: 100vh;
+    margin: 1rem auto;
+    justify-content: space-evenly;
+    padding:1rem;
+
+    h2{
+        text-align: center;
+        color: white;
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+    p{
+        padding-left: 3rem;
+        padding-top: 5rem;
+        max-width: 60%;
+        line-height: 1.5rem;
+    }
+}
+

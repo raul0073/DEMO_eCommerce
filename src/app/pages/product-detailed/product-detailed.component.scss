@@ -36,10 +36,34 @@ $webOrange: rgb(255, 191, 71);
             font-weight: 800;
             text-transform: uppercase;
         }
-        p.price{
-            font-weight: 500;
-            font-size: 1.2rem;
+
+        .container-exclusive{
+            display: flex;
+            align-items: center;
+            padding: .5rem;
+
+
+            .promotion{
+                border: .5PX solid white;
+                font-weight: 800;
+                font-size: 1.2rem;
+                color: white;
+                padding: .5rem;
+                // border-radius: 0px 40px 40px 0px;
+                width: 120px;
+                height: fit-content;
+                background-color: skyblue;
+                clip-path: polygon(50% 0%, 100% 0, 85% 51%, 100% 100%, 0 100%, 0% 60%, 0 0);
+  
+            }
+            span.price{
+                font-weight: 500;
+                font-size: 1.8rem;
+                width: fit-content;
+    
+            }
         }
+
         button.addToCart{
             width: 40%;
             padding: .5rem;

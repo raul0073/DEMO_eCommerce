@@ -5,7 +5,12 @@
     <div class="rightContent">
         <i>{{productDetails.brand}}</i>
         <h2>{{productDetails.title}}</h2>
-        <p class="price">$ {{productDetails.price}}</p>
+        <div class="container-exclusive">
+            <div class="promotion">EXCLUSIVE</div>
+            <span class="price">$ {{productDetails.price}}</span>
+            {{productDetails.qty}}
+        </div>
+        
         <button class="addToCart" (click)="addToCart(productDetails.id)">Add to Cart</button>
         <p>{{productDetails.description}}</p>
     </div>

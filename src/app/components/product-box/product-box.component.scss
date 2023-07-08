@@ -1,7 +1,7 @@
 $webOrange: rgb(255, 191, 71);
 .box-clickable-wrapper{
     height: 430px;
-    cursor: pointer;
+
 }
 .box{
     width: 300px !important;
@@ -44,6 +44,7 @@ $webOrange: rgb(255, 191, 71);
             width: fit-content;
             font-size: 1.5rem;
             border-bottom: 1px solid black;
+            cursor: pointer;
         }
         p{
             width: 95%;
@@ -58,10 +59,14 @@ $webOrange: rgb(255, 191, 71);
 
             &.brand{
                 font-size: .8rem;
+                cursor: pointer;
             }
+            
             &.price{
 
                 font-weight: 800;
+
+
             }
         } 
         span.discount{
@@ -80,7 +85,8 @@ $webOrange: rgb(255, 191, 71);
         margin: .5rem 0;
 
         button.btnAdd{
-            width: 100%;
+            display: flex;
+            width: fit-content;
             padding: .5rem;
             cursor: pointer;
             border: none;
@@ -91,10 +97,17 @@ $webOrange: rgb(255, 191, 71);
             transition: .4s ease;
             text-transform: uppercase;
             font-weight: 800;
+            align-items: center;
+
 
             &:hover{
                 border: 1px solid black;
             }
+        }
+
+        svg{
+            width: 22px;
+            height: 22px;
         }
     }
 

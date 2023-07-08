@@ -17,4 +17,6 @@ export class ProductService {
   getOneProductForBox(id: string): Observable<any[]> {
     return this.http.get<any>('https://dummyjson.com/products/' + id)
   }
+  
+  
 }

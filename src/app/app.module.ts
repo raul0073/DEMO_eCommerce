@@ -9,6 +9,8 @@ import { ProductBoxComponent } from './components/product-box/product-box.compon
 import { CartComponent } from './components/cart/cart.component';
 import { ProductDetailedComponent } from './pages/product-detailed/product-detailed.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CategoriesComponent } from './pages/categories/categories.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ProductBoxComponent,
     CartComponent,
     ProductDetailedComponent,
+    CategoriesComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
